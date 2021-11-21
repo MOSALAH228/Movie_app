@@ -1,7 +1,10 @@
 import React from "react";
+import { useContext } from "react";
 import { Formik } from "formik";
+import { LanguageContext } from "../context/counterContext";
 
 export default function Login() {
+  const { lang, setLang } = useContext(LanguageContext);
   return (
     <>
       <div className="container">
@@ -97,6 +100,13 @@ export default function Login() {
             </form>
           )}
         </Formik>
+        <h1>lang is : {lang}</h1>
+        <button
+          className="btn btn-success"
+          onClick={() => (lang === "en" ? setLang("ar") : setLang("en"))}
+        >
+          Change Language
+        </button>
       </div>
     </>
   );

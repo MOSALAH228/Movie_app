@@ -1,12 +1,19 @@
 import React from "react";
 import { Link } from "react-router-dom";
+import { LanguageContext } from "../context/counterContext";
+import { useContext } from "react";
 
 export default function NavBar() {
+  const { lang } = useContext(LanguageContext);
+
   return (
     <>
       <nav className="navbar navbar-expand-lg navbar-light bg-light">
         <div className="container-fluid">
-          <Link className="text-danger" to="/">
+          <Link
+            className="text-decoration-none float-end text-danger p-1"
+            to="/"
+          >
             Movies
           </Link>
 
@@ -23,16 +30,29 @@ export default function NavBar() {
           </button>
           <div className="collapse navbar-collapse" id="navbarSupportedContent">
             <ul className="navbar-nav me-auto mb-2 mb-lg-0">
-              <li className="nav-item">
-                <a className="nav-link active" aria-current="page" href="#">
+              <li className="nav-item mx-2">
+                <Link
+                  className="text-decoration-none float-end text-primary p-1"
+                  to="/favourites"
+                >
                   Favourites
-                </a>
+                </Link>
               </li>
               <li className="nav-item mx-2">
-                <Link to="/login">Login</Link>
+                <Link
+                  className="text-decoration-none float-end text-primary p-1"
+                  to="/login"
+                >
+                  Login
+                </Link>
               </li>
               <li className="nav-item mx-2">
-                <Link to="/registration">Register</Link>
+                <Link
+                  className="text-decoration-none float-end text-primary p-1"
+                  to="/registration"
+                >
+                  Register
+                </Link>
               </li>
             </ul>
             <form className="d-flex">
@@ -46,6 +66,9 @@ export default function NavBar() {
                 Search
               </button>
             </form>
+            <Link className="text-decoration-none float-end text-success p-1">
+              {lang}
+            </Link>
           </div>
         </div>
       </nav>
