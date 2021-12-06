@@ -1,3 +1,6 @@
+-Movie app module that shows your favourite movies and the last updated using fake api , i have also added 
+a form login and regestiration and some cool stuff that u can check it out using ReactJs.
+
 ![screencapture-localhost-3000-moviesDetails-370172-2021-11-25-02_51_21](https://user-images.githubusercontent.com/77206236/144940940-1d8a90d6-d82e-40f2-b5dd-f6242c89ffc4.png)
 ![screencapture-localhost-3000-login-2021-11-25-02_53_42](https://user-images.githubusercontent.com/77206236/144940944-cf6be0b6-d8d1-42af-ac5d-14ddc91ce35d.png)
 ![screencapture-localhost-3000-registration-2021-11-25-02_53_50](https://user-images.githubusercontent.com/77206236/144940945-171db0b6-b852-45d7-a3f1-c29e9512fbd6.png)
